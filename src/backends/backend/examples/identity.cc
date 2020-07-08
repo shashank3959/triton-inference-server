@@ -241,8 +241,8 @@ ModelInstance::ExecuteThread()
     // can't be called until the model is loaded...
     if (!supports_batching_initialized) {
       LOG_IF_ERROR(
-        model_state_->SupportsFirstDimBatching(&supports_batching),
-        "failed to determine batching support");
+          model_state_->SupportsFirstDimBatching(&supports_batching),
+          "failed to determine batching support");
       supports_batching_initialized = true;
     }
 
